@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>弹药都在，缺的是上膛 · 给帆姐的 AI × 商业建议书</title>
+<meta name="description" content="一场 67 分钟的对话之后，我们想对帆姐说的话：洞察、没被看见的可能性，以及接下来 90 天怎么走。">
+<meta property="og:title" content="弹药都在，缺的是上膛 · 给帆姐的 AI × 商业建议书">
+<meta property="og:image" content="fanjie.jpg">
+<style>
+:root{
+  --teal-ink:#0d2f3b;
+  --teal:#16566a;
+  --teal-soft:#2b7489;
+  --violet:#6a3fb0;
+  --violet-glow:#a77be6;
+  --orchid:#d9b8ff;
+  --cream:#f4eee5;
+  --sand:#e8dccb;
+  --walnut:#7b4a2c;
+  --ink:#23201d;
+  --muted:#6f675e;
+  --serif:"Songti SC","STSong","Noto Serif CJK SC","Source Han Serif SC","Noto Serif SC",serif;
+  --sans:"PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Microsoft YaHei",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.85;font-size:17px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100vh;color:var(--cream);overflow:hidden;
+  background:
+    radial-gradient(60% 55% at 78% 22%, rgba(167,123,230,.55), transparent 70%),
+    radial-gradient(50% 60% at 20% 90%, rgba(43,116,137,.55), transparent 70%),
+    linear-gradient(160deg,#1b1240 0%, #2a1a5e 30%, var(--teal-ink) 75%);}
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.18;
+  background-image:radial-gradient(rgba(255,255,255,.7) 1px, transparent 1.2px);background-size:3px 3px;mix-blend-mode:overlay}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;min-height:100vh;padding-block:72px}
+.eyebrow{font-size:13px;letter-spacing:.32em;color:var(--orchid);text-transform:uppercase}
+.hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(40px,6.2vw,76px);line-height:1.18;margin:22px 0 26px;letter-spacing:.02em}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--orchid),#7fd0e0);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lede{font-size:19px;max-width:30em;color:rgba(244,238,229,.86)}
+.hero .meta{margin-top:36px;display:flex;flex-wrap:wrap;gap:10px 22px;font-size:14px;color:rgba(244,238,229,.62)}
+.hero .meta b{color:var(--cream);font-weight:500}
+.portrait{position:relative;justify-self:center;width:min(400px,100%)}
+.portrait .frame{position:relative;border-radius:220px 220px 18px 18px;overflow:hidden;
+  box-shadow:0 0 0 1px rgba(217,184,255,.35),0 30px 80px -20px rgba(106,63,176,.75)}
+.portrait img{width:100%;aspect-ratio:900/1180;object-fit:cover;object-position:50% 12%}
+.portrait .frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(13,47,59,.55))}
+.portrait figcaption{position:absolute;left:-26px;bottom:34px;background:var(--cream);color:var(--teal-ink);
+  font-family:var(--serif);padding:14px 20px;border-radius:4px;font-size:15px;line-height:1.6;box-shadow:0 14px 40px -12px rgba(0,0,0,.5);max-width:250px}
+.portrait figcaption small{display:block;font-family:var(--sans);color:var(--muted);font-size:12px;margin-top:4px}
+.scroll-hint{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);font-size:12px;letter-spacing:.3em;color:rgba(244,238,229,.5);z-index:1}
+
+/* ---------- sections ---------- */
+section{padding:110px 0}
+.sec-head{display:flex;align-items:baseline;gap:22px;margin-bottom:46px}
+.sec-no{font-family:var(--serif);font-size:15px;color:var(--violet);letter-spacing:.2em;white-space:nowrap}
+.sec-head h2{font-family:var(--serif);font-size:clamp(28px,3.6vw,42px);line-height:1.3;font-weight:700;color:var(--teal-ink)}
+.sec-sub{color:var(--muted);max-width:40em;margin:-26px 0 46px}
+
+/* heard */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.q{background:#fff;border-radius:14px;padding:28px 26px 24px;position:relative;border:1px solid var(--sand)}
+.q::before{content:"“";position:absolute;top:-6px;left:18px;font-family:var(--serif);font-size:72px;color:var(--orchid);line-height:1}
+.q p{font-family:var(--serif);font-size:18px;color:var(--teal-ink);position:relative}
+.q span{display:block;margin-top:14px;font-size:13px;color:var(--muted)}
+.heard-note{margin-top:40px;padding:26px 30px;border-left:3px solid var(--violet);background:linear-gradient(90deg,rgba(106,63,176,.08),transparent);font-size:18px}
+
+/* insights */
+.insights{background:var(--teal-ink);color:var(--cream);position:relative;overflow:hidden}
+.insights::before{content:"";position:absolute;right:-200px;top:-200px;width:600px;height:600px;border-radius:50%;
+  background:radial-gradient(circle,rgba(167,123,230,.35),transparent 65%)}
+.insights .sec-head h2{color:var(--cream)}
+.insights .sec-no{color:var(--orchid)}
+.ins{display:grid;grid-template-columns:90px 1fr;gap:10px 30px;padding:34px 0;border-top:1px solid rgba(244,238,229,.14);position:relative}
+.ins:last-child{border-bottom:1px solid rgba(244,238,229,.14)}
+.ins .n{font-family:var(--serif);font-size:54px;line-height:1;color:transparent;-webkit-text-stroke:1px var(--orchid)}
+.ins h3{font-family:var(--serif);font-size:25px;line-height:1.45;margin-bottom:10px}
+.ins p{color:rgba(244,238,229,.78);max-width:46em}
+.ins p strong{color:#9fe0ee;font-weight:500}
+
+/* possibilities */
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.card{background:#fff;border-radius:18px;padding:34px 32px 30px;border:1px solid var(--sand);position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-4px);box-shadow:0 24px 50px -24px rgba(22,86,106,.45)}
+.card::after{content:"";position:absolute;left:0;top:0;height:4px;width:100%;background:linear-gradient(90deg,var(--teal),var(--violet))}
+.tag{display:inline-block;font-size:12px;letter-spacing:.12em;padding:3px 10px;border-radius:99px;background:rgba(106,63,176,.1);color:var(--violet);margin-bottom:14px}
+.tag.teal{background:rgba(22,86,106,.1);color:var(--teal)}
+.card h3{font-family:var(--serif);font-size:23px;line-height:1.45;color:var(--teal-ink);margin-bottom:12px}
+.card p{color:#4a443e;font-size:16px}
+.card .how{margin-top:16px;padding-top:14px;border-top:1px dashed var(--sand);font-size:14.5px;color:var(--muted)}
+.card .how b{color:var(--walnut);font-weight:600}
+.card.wide{grid-column:1/-1;background:linear-gradient(135deg,#fff 0%,#f3ecff 100%)}
+
+/* rings */
+.rings-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.rings{position:relative;aspect-ratio:1;max-width:420px;width:100%;margin:0 auto}
+.ring{position:absolute;border-radius:50%;display:flex;justify-content:center;font-family:var(--serif);font-size:15px}
+.ring span{margin-top:12px;letter-spacing:.1em}
+.r4{inset:0;background:rgba(106,63,176,.08);border:1px dashed rgba(106,63,176,.5);color:var(--violet)}
+.r3{inset:13%;background:rgba(43,116,137,.12);border:1px solid rgba(43,116,137,.4);color:var(--teal)}
+.r2{inset:26%;background:rgba(22,86,106,.3);color:var(--teal-ink)}
+.r1{inset:39%;background:var(--teal-ink);color:var(--cream);align-items:center}
+.r1 span{margin:0;text-align:center;line-height:1.5}
+.steps{list-style:none;counter-reset:s}
+.steps li{position:relative;padding:0 0 26px 54px}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:2px;width:34px;height:34px;border-radius:50%;
+  background:var(--teal-ink);color:var(--cream);font-family:var(--serif);display:grid;place-items:center;font-size:15px}
+.steps li::after{content:"";position:absolute;left:16.5px;top:40px;bottom:6px;width:1px;background:var(--sand)}
+.steps li:last-child::after{display:none}
+.steps h4{font-family:var(--serif);font-size:19px;color:var(--teal-ink)}
+.steps p{color:var(--muted);font-size:15.5px}
+
+/* timeline */
+.timeline{background:linear-gradient(180deg,var(--cream),var(--sand))}
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;position:relative}
+.tl::before{content:"";position:absolute;left:0;right:0;top:19px;height:2px;background:linear-gradient(90deg,var(--teal),var(--violet))}
+.tl-item{position:relative;padding-top:52px}
+.tl-item::before{content:"";position:absolute;top:10px;left:0;width:20px;height:20px;border-radius:50%;background:var(--cream);border:3px solid var(--violet)}
+.tl-item .when{font-size:13px;letter-spacing:.14em;color:var(--violet)}
+.tl-item h4{font-family:var(--serif);font-size:20px;color:var(--teal-ink);margin:4px 0 10px}
+.tl-item ul{list-style:none;font-size:15px;color:#4a443e}
+.tl-item li{padding-left:14px;position:relative;margin-bottom:6px;line-height:1.7}
+.tl-item li::before{content:"";position:absolute;left:0;top:.75em;width:5px;height:5px;border-radius:50%;background:var(--teal-soft)}
+
+/* care */
+.care{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.care div{padding:26px 24px;border-radius:14px;background:#fff;border:1px solid var(--sand)}
+.care h4{font-family:var(--serif);font-size:18px;color:var(--walnut);margin-bottom:8px}
+.care p{font-size:15.5px;color:#4a443e}
+
+/* closing */
+.closing{background:
+    radial-gradient(70% 80% at 50% 0%, rgba(167,123,230,.45), transparent 70%),
+    linear-gradient(180deg,#24165a,var(--teal-ink));color:var(--cream);text-align:center;padding:130px 0 90px}
+.closing h2{font-family:var(--serif);font-size:clamp(30px,4.4vw,52px);line-height:1.4;font-weight:700}
+.closing p{max-width:34em;margin:26px auto 0;color:rgba(244,238,229,.8);font-size:18px}
+.sign{margin-top:54px;font-family:var(--serif);color:var(--orchid);letter-spacing:.2em}
+footer{margin-top:70px;font-size:12px;color:rgba(244,238,229,.4)}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+@media (max-width:860px){
+  body{font-size:16px}
+  section{padding:76px 0}
+  .hero-grid{grid-template-columns:1fr;gap:40px;padding-block:64px 90px}
+  .portrait{width:min(320px,86%);order:-1}
+  .portrait figcaption{left:-14px}
+  .quotes,.care{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr}
+  .ins{grid-template-columns:1fr}
+  .ins .n{font-size:40px}
+  .rings-wrap{grid-template-columns:1fr}
+  .tl{grid-template-columns:1fr;gap:6px}
+  .tl::before{left:9px;right:auto;top:0;bottom:0;width:2px;height:auto}
+  .tl-item{padding:0 0 24px 44px}
+  .tl-item::before{top:4px}
+  .sec-head{flex-direction:column;gap:6px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">For 帆姐 · AI × 商业建议书 · 2026.11</div>
+      <h1>弹药都在，<br>缺的是<em>上膛</em>。</h1>
+      <p class="lede">你说「武器库里都是弹药，但没好好整理」，又说「肉都烂在锅里」。听完这 67 分钟，我们的判断是：你不缺内容、不缺交付、不缺信任，缺的是一套把这些<b>持续变成影响力和成交</b>的系统。这正是 AI 现在最擅长的事。</p>
+      <div class="meta"><span>对话 <b>67 分钟</b></span><span>洞察 <b>5 条</b></span><span>没看见的可能 <b>7 个</b></span><span>落地 <b>90 天</b></span></div>
+    </div>
+    <figure class="portrait">
+      <div class="frame"><img src="fanjie.jpg" alt="帆姐在「女主力 · 人生重塑闭门会」现场分享"></div>
+      <figcaption>这样的现场，每一场都值得被看见一百次。<small>女主力 · 人生重塑闭门会 · 广州 2026.10</small></figcaption>
+    </figure>
+  </div>
+  <div class="scroll-hint">向下 ↓</div>
+</header>
+
+<section id="heard">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-no">01 / 我们听到的</span><h2>你自己其实已经说出了答案</h2></div>
+    <div class="quotes">
+      <div class="q reveal"><p>我又不是个卖货的，又不想干个纯卖课的。不好找对标，可能是个优势。</p><span>—— 关于定位</span></div>
+      <div class="q reveal"><p>录口播的时候，对面那个对象感空了，我不确定该对什么人说什么话。</p><span>—— 关于短视频</span></div>
+      <div class="q reveal"><p>后端打得特别夯实，唯独把前端获客这件事弱化掉了。</p><span>—— 关于业务</span></div>
+      <div class="q reveal"><p>我其实真是个获客宝宝，给很多发售型 IP 导过高质感的用户。</p><span>—— 关于你的天赋</span></div>
+      <div class="q reveal"><p>AI 和系统意识，本身也是一件事。</p><span>—— 关于 AI</span></div>
+      <div class="q reveal"><p>我似乎有一个契机把商业做大，但一定不是靠现在的业务模型和团队模型。</p><span>—— 关于下一步</span></div>
+    </div>
+    <p class="heard-note reveal">把这六句话放在一起看：<b>天赋在前端，精力却全压在后端</b>。两位老师交付越来越好，六城六场、270 人进课，后端已经稳了。下一阶段，你个人要从「什么都扛」退半步，让<b>系统</b>替你往前顶。</p>
+  </div>
+</section>
+
+<section class="insights" id="insights">
+  <div class="wrap" style="position:relative">
+    <div class="sec-head reveal"><span class="sec-no">02 / 洞察</span><h2>五个判断</h2></div>
+
+    <div class="ins reveal"><div class="n">01</div><div>
+      <h3>短视频的瓶颈不在产能，在「对象感」</h3>
+      <p>一个审美很好的剪辑同事两三天出一条片，看上去是产能问题。但你自己点破了根子：<strong>不知道在对谁说话</strong>。没有清晰的「那个人」，AI 一天剪 20 条也只是更快地散。所以第一刀先下在定位上，产能放在第二位。</p>
+    </div></div>
+
+    <div class="ins reveal"><div class="n">02</div><div>
+      <h3>你的赛道是「AI 时代一号位的关系系统」，市场上还没人占住</h3>
+      <p>做创业的「能量派」交付偏弱，做商业的不懂关系，做关系的不懂商业。你这一年半把<strong>关系科学 × 商业</strong>打通了，正好卡在中间。AI 越把效率推向极致，<strong>判断、取舍、序位</strong>这些「人」的部分越稀缺。你一句「AI 和系统意识是一件事」，就是现成的母题：<strong>AI 管效率，关系管方向</strong>。</p>
+    </div></div>
+
+    <div class="ins reveal"><div class="n">03</div><div>
+      <h3>「肉烂在锅里」：交付现场本身就是内容</h3>
+      <p>一个月六场线下课、三位老师、十几门课、两年的现场录音和学员故事，这些素材够一个账号发一年。缺的是一条<strong>录音 → 转写 → 选题 → 剪辑 → 发布 → 复盘</strong>的流水线。直播同时承担内容、销售、交付三种角色，是这条流水线最好的源头。</p>
+    </div></div>
+
+    <div class="ins reveal"><div class="n">04</div><div>
+      <h3>你真正的资产是「信任」，AI 要站在它的后面</h3>
+      <p>你退出发售体系，是因为它「耗信任和口碑」。所以在你这里，AI 的位置是<strong>后台的大脑</strong>：帮销售读懂客户、记住每一段关系、在对的时候递上对的案例，而前台始终是真人、真关系。用到你的场景里，就是「AI 在后、人在前」。</p>
+    </div></div>
+
+    <div class="ins reveal"><div class="n">05</div><div>
+      <h3>「自己写更快」没错，AI 本来也不是来替你写的</h3>
+      <p>你的内容能力和内在系统性已经很强，所以和 AI 对话总觉得多此一举。其实 AI 不该替你思考，它该做的是<strong>复制你</strong>：让团队、合伙人、学员都能调用「帆姐会怎么判断」。你是源头，AI 是放大器。</p>
+    </div></div>
+  </div>
+</section>
+
+<section id="possible">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-no">03 / 你可能还没看到的</span><h2>七个可能性</h2></div>
+    <p class="sec-sub reveal">前三个已在合作方案里，我们往深挖了一层；后四个是这次对话之外，我们觉得值得一起赌的。</p>
+    <div class="cards">
+
+      <div class="card reveal"><span class="tag teal">方案内 · 深化</span>
+        <h3>一场课 = 一个月的内容</h3>
+        <p>每场线下课默认全程录音录像，课后 24 小时内由 AI 自动产出：金句切片、学员蜕变故事、老师观点短片、朋友圈文案。六城六场课，就是六个内容矿。</p>
+        <div class="how"><b>怎么开始：</b>11 月大课先做试点，跑通一条「课程素材 → 切片 → 发布」的线。</div>
+      </div>
+
+      <div class="card reveal"><span class="tag teal">方案内 · 深化</span>
+        <h3>剪辑同事升级成「审片人」</h3>
+        <p>她审美好、跟了你两年、知道什么能说什么不能说，这正是 AI 流水线里最贵的那一个人工节点：<b>审选题、审剪辑稿</b>。重复的剪辑交给系统，她的判断力从每周 3 条放大到每天 20 条。</p>
+        <div class="how"><b>怎么开始：</b>12 月拍摄期间，让她全程跟着学怎么搭系统、怎么调系统。</div>
+      </div>
+
+      <div class="card reveal"><span class="tag teal">方案内 · 深化</span>
+        <h3>直播切片带 599，验证一次就知道</h3>
+        <p>「短视频带不动 599」是经验，但你两场直播就带动了。AI 切片的成本几乎为零，值得用数据回答：开一个独立切片号，按周复盘哪类切片带来私信和成交。</p>
+        <div class="how"><b>怎么开始：</b>先恢复每月 2–4 场公域直播，作为切片源头。</div>
+      </div>
+
+      <div class="card reveal"><span class="tag">新 · 获客</span>
+        <h3>「一号位关系体检」：一个不低价、但高质量的入口</h3>
+        <p>你不想做超低客单获客。可以把序位、平衡、流动做成一份 AI 引导的自测：用户回答 15 个关于家庭和事业的问题，拿到一份像样的个人报告，再由真人顾问解读。筛进来的是愿意花时间审视自己的人，正好是你要的那群高质量用户。</p>
+        <div class="how"><b>价值：</b>前端获客 + 销售的第一手画像，直接接到 599 礼盒。</div>
+      </div>
+
+      <div class="card reveal"><span class="tag">新 · 资产</span>
+        <h3>学员故事库：案例是你最好的销售</h3>
+        <p>国企中高管在下行周期里没掉下去，做了 30 年香云纱的姐姐，潮汕 40 年美业家族……这些<b>「关系科学 × 主业」的蜕变故事</b>就是最有说服力的内容。用 AI 把每次访谈、课堂分享沉淀进同一张案例表，销售按行业一键匹配，内容按主题一键取材。</p>
+        <div class="how"><b>价值：</b>同一份素材，内容、销售、合伙人三方复用。</div>
+      </div>
+
+      <div class="card reveal"><span class="tag">新 · 交付</span>
+        <h3>课后 AI 陪练：把三天的课延伸成三个月</h3>
+        <p>交付规格高、固定成本高，最贵的是老师的时间。用两位老师的体系训练一个「关系科学练习伙伴」，课后陪学员做每日觉察、复盘关系卡点，遇到要真人处理的问题再转交老师。学员感受到持续陪伴，复购和转介绍跟着来，老师的时间也省下来了。</p>
+        <div class="how"><b>价值：</b>交付边际成本下降，同时多出一个可以单独售卖的产品。</div>
+      </div>
+
+      <div class="card wide reveal"><span class="tag">新 · 生态</span>
+        <h3>你的用户还没 AI 化，这就是窗口：做她们的「AI 转型引路人」</h3>
+        <p>你的核心用户里，除了一位外企高管，几乎都还没用上 AI。她们都是有自己主业的一号位：美业、香云纱、国企、家族生意。等你和团队先跑通，<b>你本人就是最好的案例</b>，可以把「关系科学 + AI 工作流」打包给合伙人和核心用户，帮她们在自己的主业里降维打击。你不用去卖更多的课，你让每个合伙人的主业更强，她们无心的分享自然会带回新用户。</p>
+        <div class="how"><b>这条最值钱：</b>它把「合伙人帮我卖课」变成「我帮合伙人把事业做大」，符合你一贯的价值观，也是你说的「搭个架子，让大家顺着杆往上爬」。</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="rings" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-no">04 / 路径</span><h2>就按你说的「三圈」，一圈一圈往外推</h2></div>
+    <div class="rings-wrap">
+      <div class="rings reveal" aria-hidden="true">
+        <div class="ring r4"><span>合伙人 · 核心用户</span></div>
+        <div class="ring r3"><span>团队 AI 流程</span></div>
+        <div class="ring r2"><span>获客 · 转化</span></div>
+        <div class="ring r1"><span>帆姐<br>IP 定位</span></div>
+      </div>
+      <ol class="steps reveal">
+        <li><h4>中心：重新定位，找回「对象感」</h4><p>明确「那个人」是谁、她的卡点是什么、你给她什么。所有内容从这里长出来。</p></li>
+        <li><h4>第一圈：IP 影响力 + 直播切片</h4><p>定位落地成选题库和拍摄，直播恢复节奏，AI 切片接管分发和复盘。</p></li>
+        <li><h4>第二圈：团队 AI 化，按任务重组</h4><p>四个负责人和六七个销售不裁人，每个人借 AI 往上下游多做一段。销售聊天记录自动分析意向、推荐升单路径、匹配案例。</p></li>
+        <li><h4>第三圈：复制给合伙人</h4><p>你们跑通的内容和销售系统，变成合伙人可以直接用的工具包。能自己带的你带，带不了的我们一起服务。</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="timeline" id="timeline">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-no">05 / 90 天</span><h2>接下来的节奏</h2></div>
+    <div class="tl">
+      <div class="tl-item reveal"><div class="when">本周</div><h4>先玩起来</h4>
+        <ul><li>给你装上团队用的 group bot，同事对接</li><li>拉群，所有细节随时碰</li><li>先翻翻我们发的剪辑流程图和成片</li></ul></div>
+      <div class="tl-item reveal"><div class="when">11 月中下旬</div><h4>沉淀 &amp; 整理</h4>
+        <ul><li>大课全程录制，作为第一批素材</li><li>一起梳理定位：「那个人」画像</li><li>确定 11.30 到场名单，包括会务和核心付费用户</li></ul></div>
+      <div class="tl-item reveal"><div class="when">11.30 – 12.4 · 青岛</div><h4>五天集中</h4>
+        <ul><li>3 天团队 AI 内训 + 联合办公</li><li>IP 拍摄，剪辑同事全程跟</li><li>定 1–2 个优先改造的流程，派专人负责</li></ul></div>
+      <div class="tl-item reveal"><div class="when">12 月 – 2 月</div><h4>跑 · 调 · 复盘</h4>
+        <ul><li>前期每半个月调优一次，之后每月一次</li><li>切片号上线，看 599 的转化数据</li><li>跑出正反馈后，挑 1–2 位合伙人先试</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="care">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-no">06 / 几句真心话</span><h2>做这件事，我们会守住的三条线</h2></div>
+    <div class="care">
+      <div class="reveal"><h4>不快，但要稳</h4><p>你说你不想做太快的事。我们也不追求一次把所有流程 AI 化，先挑最痛的一两个点做出正反馈，再一点点铺开。</p></div>
+      <div class="reveal"><h4>信任不外包</h4><p>AI 可以替销售做分析、出建议、起草回复，但在你的品牌里，和客户之间的关系要由真人维护。这是「关系科学」品牌的底线。</p></div>
+      <div class="reveal"><h4>不裁人，让人长大</h4><p>AI 带来的是每个人能力的拓展，用不着拿它当裁员的理由。四位负责人都很能打，AI 让他们各自多覆盖一段上下游。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="wrap">
+    <h2>你已经把最难的部分做完了：<br>交付、口碑、一群信你的人。</h2>
+    <p>剩下的，是让这些被更多对的人看见。我们一起，把弹药上膛。</p>
+    <div class="sign">—— 瑶瑶 &amp; Zoe · 2026 年 11 月</div>
+    <footer>本页基于 2026.11.03 的合作沟通整理，仅供帆姐团队内部参考。</footer>
+  </div>
+</section>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
